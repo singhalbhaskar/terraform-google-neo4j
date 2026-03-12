@@ -22,6 +22,16 @@ variable "name" {
 
 }
 
+variable "client_id_secret_name" {
+ type    = string
+ default = ""
+}
+
+variable "client_secret_secret_name" {
+ type    = string
+ default = ""
+}
+
 variable "cloud_provider" {
  type    = string
  default = "gcp"

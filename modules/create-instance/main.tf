@@ -1,3 +1,15 @@
+data "google_secret_manager_secret_version" "client_id" {
+  project = var.project_id
+  secret  = var.client_id_secret_name
+   version = "latest"           
+}
+
+data "google_secret_manager_secret_version" "client_secret" {
+  project = var.project_id
+  secret  = var.client_secret_secret_name
+   version = "latest"           
+}
+
 locals{
  
   get_project_id = data.neo4jaura_projects.this.projects[var.project_serial_no].id
